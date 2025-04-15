@@ -1,3 +1,4 @@
+import id from '@angular/common/locales/id';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,13 +8,21 @@ import { Component } from '@angular/core';
 })
 export class TaskListComponent {
 
+
+
   tasks: string[] = [];
+  reloadactividad: any;
+p: any;
 
   constructor() {
     console.log('TaskListComponent initialized');
   }
 
   addTask(task: string) {
+
+    
+      this.reloadactividad.emit();
+    
     console.log('Adding task:', task);
   }
 
@@ -22,6 +31,6 @@ export class TaskListComponent {
   }
 
   deleteTask(task: string) {
-    console.log('Deleting task:', task);
+   
   }
 }

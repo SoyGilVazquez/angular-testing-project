@@ -1,0 +1,60 @@
+<p>task-item works!</p>
+<form action="">
+  
+
+    <i style="font-size:48px;margin-right: 20px;"class="fas fa-th"></i>
+ <div style="width: 60%; margin: 0 auto"></div>
+    <div class="row">
+        <div class="d-flex flex-wrap">
+      @for(p of actividad; track p ){ 
+       
+            
+
+            <div class="button-container">  
+            <button type="button" class="btn btn-primary" data-bs-target="#Abrir" data-bs-toggle="modal">Ver</button>
+            </div>
+            
+    
+    
+    
+    
+    <button type="submit">Editar</button>
+
+            <div class="button-container">
+            <button type="button" class="btn btn-secondary" (click)="deleteTask(p.id_actividad)">Eliminar</button>
+            </div>
+
+            
+
+            
+          
+          
+      }
+    </div>
+    </div><!-- Button trigger modal -->
+    
+    
+    <!-- Modal -->
+    <div class="modal fade" id="Abrir" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+          </div>
+          <div class="modal-body">
+        
+          </div>
+          <div class="modal-footer">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    
+    
+    
+    <button type="button" class="btn btn-secondary" (click)="deleteTask(p.id_actividad)">Eliminar</button>
+    <button type="button" class="btn btn-secondary" (click)="updateTask(p.id_actividad)">Editar</button>
+    
+    
+  </form>
